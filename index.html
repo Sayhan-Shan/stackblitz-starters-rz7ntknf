@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InnoRace - 1-4 Player Strategy Game</title>
+    <!-- StackBlitz automatically hooks style.css here -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">⚡ InnoRace '26</div>
+      <p>
+        A multi-player resource strategy game. Claim sectors, avoid disasters,
+        reach 50 points to win!
+      </p>
+    </header>
+
+    <main class="grid-container">
+      <!-- Main Arena Dashboard Screen -->
+      <div class="main-column">
+        <div class="card">
+          <h2>🎮 Game Match Setup</h2>
+          <p>
+            Select the number of active competitors sitting at the keyboard to
+            instantly bootstrap a turn-based board match:
+          </p>
+          <div class="setup-group">
+            <button class="game-btn" id="btn-p2">2 Players</button>
+            <button class="game-btn" id="btn-p3">3 Players</button>
+            <button class="game-btn" id="btn-p4">4 Players</button>
+          </div>
+
+          <div id="turn-display" class="turn-announcer">
+            Click a player option above to begin!
+          </div>
+
+          <button id="roll-btn" class="action-btn" disabled>
+            Scavenge Urban Resources
+          </button>
+        </div>
+      </div>
+
+      <!-- Leaderboard Stream Array Sidebars -->
+      <div class="sidebar-column">
+        <div class="card">
+          <h2>📊 Player Scoreboard</h2>
+          <div id="score-board" class="scoreboard">
+            <!-- Badges render here dynamically from script calculations -->
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>📢 Live Match Action Log</h2>
+          <div id="game-feed" class="log-container">
+            <div class="log-item">
+              Game system ready. Waiting for player configuration
+              initialization...
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- StackBlitz maps project scripts via index.js -->
+    <script src="index.js"></script>
+  </body>
+</html>
